@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Private NDA-safe Portfolio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body { font-family: Inter, Arial, sans-serif; background:#0f1115; color:#e6e6e6; margin:0; padding:40px; }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .login { max-width: 420px; margin: 120px auto; background:#161a22; padding:24px; border-radius:12px; text-align:center; }
+    .card { background:#161a22; padding:24px; border-radius:16px; margin-bottom:28px; }
+    h1, h2, h3 { margin-top: 0; }
+    .grid { 
+  display:grid; 
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); 
+  gap:18px; 
+}
+    .grid img {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+    .grid img { cursor: zoom-in; }
+    img { width:100%; border-radius:10px; }
+    a { color:#7aa2ff; }
+    .meta { color:#9aa4b2; font-size:14px; }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; background:#0b1220; margin-right:6px; font-size:12px; }
+    button, input { padding:10px 12px; border-radius:8px; border:none; }
+    button { cursor:pointer; }
+  </style>
+</head>
+<body>
+
+<div id="login" class="login">
+  <h2>Private NDA-safe Portfolio</h2>
+  <p>For recruitment purposes only</p>
+  <input type="password" id="pw" placeholder="Password" />
+  <button onclick="checkPw()">Enter</button>
+</div>
+
+<div id="content" class="wrap" style="display:none;">
+
+  <div class="card">
+    <h1>Hard Surface 3D MTX Artist</h1>
+    <p>
+      Hard Surface 3D Artist with 1.5 years of commercial experience creating game-ready assets and MTX cosmetics for live projects.
+      Experienced in full 3D pipeline, including high/low poly modeling, UVs, baking, PBR texturing, LODs, collisions, basic rigging and animation, and in-engine integration.
+      Strong collaborator with concept artists, QA, and game designers. Uses AI-assisted tools for MTX concept ideation and early visual exploration to support production workflows. Comfortable working under NDA.
+      Skilled in Unreal Engine 5, Unity, DAVA Engine, and Core Engine.
+    </p>
+    <div class="meta">Private NDA-safe portfolio. Content shared for recruitment purposes only.</div>
+  </div>
+
+  <!-- PROJECT 1 -->
+  <div class="card">
+    <h2>Tanks Blitz вЂ” Tiger Maus MTX</h2>
+    <div class="meta">Hard Surface 3D Artist вЂ” full-cycle asset creation from low/high poly modeling, rigging and animations to engine integration.</div>
+    <p>
+      <span class="pill">Maya</span>
+      <span class="pill">ZBrush</span>
+      <span class="pill">Blender</span>
+      <span class="pill">Substance Painter</span>
+      <span class="pill">Marmoset</span>
+      <span class="pill">DAVA Engine</span>
+    </p>
+    <p class="meta">Base model: 1 UV set, 2K В· Skin model: 2 UV sets, 2K + 2048Г—1024</p>
+    <div class="grid">
+      <img src="images/tigermaus_01.jpg" alt="Tiger Maus MTX render 1" onclick="openLightbox(this.src)">
+      <img src="images/tigermaus_02.jpg" alt="Tiger Maus MTX render 2" onclick="openLightbox(this.src)">
+      <img src="images/tigermaus_03.jpg" alt="Tiger Maus MTX render 3" onclick="openLightbox(this.src)">
+      <img src="images/tigermaus_04.jpg" alt="Tiger Maus MTX render 4" onclick="openLightbox(this.src)">
+      <img src="images/tigermaus_05.jpg" alt="Tiger Maus MTX render 5" onclick="openLightbox(this.src)">
+    </div>
+    <p><a href="https://www.youtube.com/watch?v=bE6kf2tPLYY" target="_blank">Official studio showcase (YouTube)</a></p>
+  </div><!-- PROJECT 2 -->
+  <div class="card">
+    <h2>Mouse MTX</h2>
+    <div class="meta">Hard Surface 3D Artist вЂ” full-cycle asset creation from low/high poly modeling, rigging and animations to engine integration.</div>
+    <p class="meta">Model: 1 UV set, 1K</p>
+    <div class="grid">
+      <img src="images/mouse_01.jpg" alt="Mouse MTX render 1" onclick="openLightbox(this.src)">
+      <img src="images/mouse_02.jpg" alt="Mouse MTX render 2" onclick="openLightbox(this.src)">
+      <img src="images/mouse_03.jpg" alt="Mouse MTX render 3" onclick="openLightbox(this.src)">
+    </div>
+    <p><a href="https://tanksblitz.ru/ru/news/event/na-chile/#/" target="_blank">Official studio news</a></p>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="card">
+    <h2>Ice Gun MTX</h2>
+    <div class="meta">Hard Surface 3D Artist вЂ” full-cycle asset creation from low/high poly modeling, rigging and animations to engine integration.</div>
+    <p class="meta">Model: 1 UV set, 1K</p>
+    <div class="grid">
+      <img src="images/icegun_01.jpg" alt="Ice Gun MTX screenshot 1" onclick="openLightbox(this.src)">
+      <img src="images/icegun_02.jpg" alt="Ice Gun MTX screenshot 2" onclick="openLightbox(this.src)">
+      <img src="images/icegun_03.jpg" alt="Ice Gun MTX screenshot 3" onclick="openLightbox(this.src)">
+    </div>
+    <p><a href="https://tanksblitz.ru/ru/news/event/happy-new-year-2026/#/" target="_blank">Official studio news</a></p>
+  </div>
+
+</div>
+
+<script>
+  const correctPw = "Portfolio";
+
+  function openLightbox(src) {
+    const lb = document.getElementById("lightbox");
+    const img = document.getElementById("lightbox-img");
+    img.src = src;
+    lb.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function checkPw() {
+    const input = document.getElementById("pw").value;
+    if (input === correctPw) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    } else {
+      alert("Incorrect password");
+    }
+  }
+</script>
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()" style="
+  display:none;
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+">
+  <img id="lightbox-img" src="" alt="" style="
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    cursor: zoom-out;
+  ">
+</div>
